@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
-import './App.css';
-import ConnectedWofDashboard from "./containers/connectedWofDashboad";
+import ConnectedWofDashboard from './connectedWofDashboard'
 
 class App extends Component {
+
   render() {
-    return (<ConnectedWofDashboard />);
-    // return (
+    return (
+      <ConnectedWofDashboard />
+    );
+  }
+
+}
+
+export default App;
+
+
+ // return (
     //   <div className="App">
     //     <header className="App-header">
     //       <img src={logo} className="App-logo" alt="logo" />
@@ -16,7 +25,3 @@ class App extends Component {
     //     </p>
     //   </div>
     // );
-  }
-}
-
-export default App;

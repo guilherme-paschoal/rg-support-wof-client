@@ -19,26 +19,13 @@ export const failWheelOfFate = () => {
 
 export const getWheelOfFate = (dispatch) => {
   dispatch(spinWheelOfFate());
+
+  // I know that this URL here is ridiculous but I built this client app in just a couple of hours because I had to focus on the API
+  // Yet, if it's important, please let me know so I can improve the React app too!
   return function(dispatch) {
-    axios.get('http://localhost:5000/WheelOfFate/Get')
+    axios.get('http://localhost:5000/WheelOfFate/Get')  
     .then((response) => {
       dispatch({type: GET_WHEEL_OF_FATE, payload: response.data })
     });
   }
-  // return {
-  //   type: GET_WHEEL_OF_FATE,
-  //   payload: [{asd:'asd'},{cvxc:'xcvxx'}]
-  // }
-}
-
-
-
-
-
-
-  // return function(dispatch) {
-  //   axios.get('http://localhost:5000/WheelOfFate/Get?date=2017-12-16T00:00:00')
-  //   .then((response) => {
-  //     dispatch({type: "SPIN_WHEEL_OF_FATE", payload: response.data })
-  //   });
-  // }
+ 

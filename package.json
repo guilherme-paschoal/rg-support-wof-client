@@ -6,6 +6,7 @@
     "axios": "^0.17.1",
     "boostrap": "^2.0.0",
     "bootstrap": "^3.3.7",
+    "numeral": "^2.0.6",
     "ramda": "^0.25.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",

@@ -10,9 +10,7 @@ import thunk from 'redux-thunk';
 import { logger } from 'redux-logger';
 import App from './containers/App';
 import reducer from './reducers'
-// import './index.css';
-// import registerServiceWorker from './registerServiceWorker';
-// import store from "./store";
+import registerServiceWorker from './registerServiceWorker';
 
 const middleware = [ thunk, logger ]
 
@@ -27,4 +25,4 @@ ReactDOM.render(
   </Provider>, document.getElementById('root')
 );
 
-// registerServiceWorker();
+registerServiceWorker();

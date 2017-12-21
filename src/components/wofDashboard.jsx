@@ -18,7 +18,7 @@ class WofDashboard extends Component {
   }
 
   renderEngineer(element) {
-    return( <WofDashboardEngineer name={element.name} shift={element.shifts[0].shiftOrder}/> )
+    return( <WofDashboardEngineer key={element.id} name={element.name} shift={element.shifts[0].shiftOrder}/> )
   }
   render() {
     return (

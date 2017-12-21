@@ -1,7 +1,5 @@
 import { combineReducers } from 'redux'
-// import { SPIN_WHEEL_OF_FATE, GET_WHEEL_OF_FATE, FAIL_WHEEL_OF_FATE } from '../actions';
 import * as actions from '../constants/actionTypes';
-
 
 const wheelOfFateReducer = (state = {
   people: [],
@@ -22,8 +20,5 @@ const wheelOfFateReducer = (state = {
   }
 }
 
-const rootReducer = combineReducers({
-  wheelOfFate: wheelOfFateReducer
-})
+export default wheelOfFateReducer;
 
-export default rootReducer;

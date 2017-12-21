@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getWheelOfFate } from '../actions';
+import { spinWheelOfFate } from '../actions/wheelOfFateActions';
 import WofDashboard from '../components/wofDashboard';
 
 const mapStateToProps = state => {
@@ -10,7 +10,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    spinWheel: () => { dispatch(getWheelOfFate(dispatch))}
+    spinWheel: () => { dispatch(spinWheelOfFate(dispatch))}
   }
 }
 

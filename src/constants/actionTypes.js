@@ -1,0 +1,4 @@
+export const API = 'API';
+export const WHEEL_OF_FATE_GET = 'WHEEL_OF_FATE_GET';
+export const WHEEL_OF_FATE_SUCCESS = 'WHEEL_OF_FATE_SUCCESS';
+export const WHEEL_OF_FATE_ERROR = 'WHEEL_OF_FATE_ERROR';

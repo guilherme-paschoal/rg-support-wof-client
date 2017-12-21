@@ -11,8 +11,9 @@ import { logger } from 'redux-logger';
 import App from './containers/App';
 import reducer from './reducers'
 import registerServiceWorker from './registerServiceWorker';
+import api from './middleware/api';
 
-const middleware = [ thunk, logger ]
+const middleware = [ thunk, logger, api ]
 
 const store = createStore(
   reducer,

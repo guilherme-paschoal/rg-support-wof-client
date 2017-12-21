@@ -1,19 +1,21 @@
 import { combineReducers } from 'redux'
-import { SPIN_WHEEL_OF_FATE, GET_WHEEL_OF_FATE, FAIL_WHEEL_OF_FATE } from '../actions';
+// import { SPIN_WHEEL_OF_FATE, GET_WHEEL_OF_FATE, FAIL_WHEEL_OF_FATE } from '../actions';
+import * as actions from '../constants/actionTypes';
+
 
 const wheelOfFateReducer = (state = {
   people: [],
   loading: false
 }, action) => {
   switch(action.type) {
-    case SPIN_WHEEL_OF_FATE: 
+    case actions.WHEEL_OF_FATE_GET: 
       return { ...state, loading: true }
-    case GET_WHEEL_OF_FATE:
+    case actions.WHEEL_OF_FATE_SUCCESS:
       return { 
         people: action.payload, 
         loading: false 
       }
-    case FAIL_WHEEL_OF_FATE:
+    case actions.WHEEL_OF_FATE_ERROR:
       return { error: action.error, loading: false }
     default:
       return state;

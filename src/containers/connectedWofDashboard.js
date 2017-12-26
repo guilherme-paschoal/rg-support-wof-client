@@ -9,9 +9,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  return {
-    spinWheel: () => { dispatch(spinWheelOfFate(dispatch))}
-  }
+  return {}
 }
 
 const ConnectedWofDashboard = connect(

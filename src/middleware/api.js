@@ -14,7 +14,9 @@ const api = ({ dispatch, getState }) => next => action => {
   
   const success = action.payload.success;
 
-  axios.get(url).then((response) => {
+  return axios.get(url, {
+    params: action.payload.params
+  }).then((response) => {
     dispatch(success(response))
   });
 

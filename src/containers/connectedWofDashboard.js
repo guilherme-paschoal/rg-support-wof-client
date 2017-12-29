@@ -4,12 +4,14 @@ import WofDashboard from '../components/wofDashboard';
 
 const mapStateToProps = state => {
   return { 
-    people: state.wheelOfFate.people
+    shifts: state.wheelOfFate.shifts
   }
 }
 
 const mapDispatchToProps = dispatch => {
-  return {}
+  return {
+    spinTheWheel: () => { dispatch(spinWheelOfFate(dispatch))},
+  }
 }
 
 const ConnectedWofDashboard = connect(

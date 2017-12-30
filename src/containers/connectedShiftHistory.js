@@ -10,17 +10,16 @@ const _getShiftHistory = (date, dispatch) => {
 const mapStateToProps = (state, ownProps) => {
   const urlSearchParams = parseUrl(ownProps.location.search);
   return {
-    date: urlSearchParams.date,
     shifts: state.shifts
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getShiftHistory: (date) => { _getShiftHistory(date, dispatch); }
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     getShiftHistory: (date) => { _getShiftHistory(date, dispatch); }
+//   }
+// }
 
-const ConnectedShiftHistory = connect(mapStateToProps, mapDispatchToProps)(ShiftHistory);
+const ConnectedShiftHistory = connect(mapStateToProps)(ShiftHistory);
 
 export default ConnectedShiftHistory;

@@ -18,9 +18,7 @@ class ShiftHistoryFilter extends Component {
   }
 
   handleFilterConfirm() {
-    if(this.state.date) {
-      this.props.doFilter(this.state.date.format('MM/DD/YYYY'));
-    }
+    this.props.doFilter(this.state);
   }
 
   render() {
@@ -36,7 +34,7 @@ class ShiftHistoryFilter extends Component {
           />
         </Col>
         <Col md={4}>
-          <ConnectedEngineerPicker />
+          <ConnectedEngineerPicker onChange={ engineer => this.setState({ engineer: engineer }) } />
         </Col>
         <Col md={6}>
           <a onClick= { this.handleFilterConfirm } > Go </a>

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import ShiftHistoryList from './shiftHistoryList';
-import ShiftHistoryFilter from './shiftHistoryFilter';
+import ConnectedShiftHistoryFilter from '../../containers/connectedShiftHistoryFilter';
 
 class ShiftHistory extends Component {
   
   render() {
     return(
       <div>
-        <ShiftHistoryFilter />
+        <ConnectedShiftHistoryFilter />
         <ShiftHistoryList shifts={this.props.shifts.shifts} />
       </div>
     )

@@ -20,6 +20,10 @@ class EngineerPicker extends Component {
     } else {
       this.setState({ selectedOption });
     }
+
+    if(this.props.onChange)
+      this.props.onChange(selectedOption);
+
   }
   render() {
     return (

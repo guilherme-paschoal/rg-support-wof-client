@@ -1,0 +1,22 @@
+.DateInput {
+  border-radius: 5px;
+  color: #ccc;
+}
+.DateInput_input {
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.DateInput_fang {
+  top: 44px;
+}
+
+.SingleDatePicker_picker {
+  top: 55px;
+}
+.SingleDatePickerInput__withBorder{
+  border-radius: 5px;
+  border-color: #ccc;
+}
+

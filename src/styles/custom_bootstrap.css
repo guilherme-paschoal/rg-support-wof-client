@@ -1,0 +1,25 @@
+.pad-left-sm {
+  padding-left: 4px;
+}
+
+.pad-right-sm {
+  padding-right: 4px;
+}
+
+.pad-sm {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.pad-top-text {
+  padding-top: 10px;
+}
+
+.full-width { 
+  width: 100%;
+}
+
+.jumbotron {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

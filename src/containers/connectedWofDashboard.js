@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import { spinWheelOfFate } from '../actions/wheelOfFateActions';
-import WofDashboard from '../components/wofDashboard';
+import WofDashboard from '../components/WheelOfFate/wofDashboard';
 
 const mapStateToProps = state => {
   return { 
-    people: state.wheelOfFate.people
+    shifts: state.wheelOfFate.shifts
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    spinWheel: () => { dispatch(spinWheelOfFate(dispatch))}
+    spinTheWheel: () => { dispatch(spinWheelOfFate(dispatch))},
   }
 }
 

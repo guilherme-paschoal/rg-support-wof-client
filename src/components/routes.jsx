@@ -11,8 +11,6 @@ class Routes extends Component {
       <Switch>
         <Route path='/wheel' component={ConnectedWofDashboard} exact />
         <Route path='/shifts' component={ConnectedShiftHistory} exact />
-        
-        {/* <Route path='/engineer/:id' component={ConnectedWofDashboard} exact /> */}
       </Switch>
     );
   }

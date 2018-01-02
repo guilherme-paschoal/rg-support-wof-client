@@ -33,7 +33,7 @@ class ShiftHistoryList extends Component {
   render() {
     return(
       <div>
-       { !R.isEmpty(this.props.shifts) && this.renderTable(this.props.shifts) }
+       { this.renderTable(this.props.shifts) }
       </div>
     )
   }

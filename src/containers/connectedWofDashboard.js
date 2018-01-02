@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { spinWheelOfFate } from '../actions/wheelOfFateActions';
-import WofDashboard from '../components/wofDashboard';
+import WofDashboard from '../components/WheelOfFate/wofDashboard';
 
 const mapStateToProps = state => {
   return { 

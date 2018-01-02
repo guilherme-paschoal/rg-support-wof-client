@@ -8,6 +8,8 @@ import { SingleDatePicker } from 'react-dates';
 import {Row, Col, Well, Button} from 'react-bootstrap';
 import ConnectedEngineerPicker from '../../containers/connectedEngineerPicker';
 
+const moment = require('moment');
+
 class ShiftHistoryFilter extends Component {
 
   constructor(props) {
@@ -15,7 +17,14 @@ class ShiftHistoryFilter extends Component {
     
     this.handleFilterConfirm = this.handleFilterConfirm.bind(this);
 
-    this.state = {};
+    this.state = {
+      date: moment().subtract(7,'days')
+    };
+  }
+
+  // Initial load with initial state
+  componentDidMount() {
+    this.handleFilterConfirm();
   }
 
   handleFilterConfirm() {
@@ -42,7 +51,6 @@ class ShiftHistoryFilter extends Component {
             <ConnectedEngineerPicker onChange={ engineer => this.setState({ engineer: engineer }) } />
           </Col>
           <Col md={5} className='pad-left-sm'>
-
             <Button onClick= { this.handleFilterConfirm } bsStyle="primary" > Go </Button>
           </Col>
         </Row>

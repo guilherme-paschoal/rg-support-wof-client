@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ShiftHistoryFilter from './ShiftHistory/shiftHistoryFilter';
 import { generateNewURL } from '../utils/urlUtils';
+import { Navbar, NavItem, Nav } from 'react-bootstrap';
 
 class WofButtons extends Component {
 
@@ -17,12 +18,12 @@ class WofButtons extends Component {
 
   render() {
     return(
-      <div>
-        <Link to="/wheel"> Spin The Wheel</Link>
-        <Link to="/shifts"> Shift History </Link>
-
-        {/* <ShiftHistoryFilter handleShiftFilterChange={this._handleShiftFilterChange}/> */}
-      </div>
+      <Navbar>
+        <Nav>
+          <NavItem href="/wheel"> Spin The Wheel </NavItem>
+          <NavItem href="/shifts"> Shift History </NavItem>
+        </Nav>
+      </Navbar>
     )
   }
 
